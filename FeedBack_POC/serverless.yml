@@ -1,0 +1,26 @@
+org: ariqt
+app: feedback-app  # Choose your app name
+service: my-express-dynamo-app
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: eu-west-3 # Change to your region
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:*
+          Resource: "arn:aws:dynamodb:eu-west-3:*:table/Feedback" # Replace with your actual table name
+
+functions:
+  api:
+    handler: index.handler # This assumes your main file is index.js
+    events:
+      - httpApi: '*'
+
+environment:
+    AWS_DEFAULT_REGION: eu-west-3
+    AWS_DYNAMODB_TABLENAME: Feedback
+    AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1"
