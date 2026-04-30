@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-reactcognitosocial-dev-2eab8-authRole",
+      "UnauthRoleArn": "arn:aws:iam::065908811349:role/amplify-reactcognitosocial-dev-2eab8-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::065908811349:role/amplify-reactcognitosocial-dev-2eab8-authRole",
+      "Region": "eu-west-3",
+      "DeploymentBucketName": "amplify-reactcognitosocial-dev-2eab8-deployment",
+      "UnauthRoleName": "amplify-reactcognitosocial-dev-2eab8-unauthRole",
+      "StackName": "amplify-reactcognitosocial-dev-2eab8",
+      "StackId": "arn:aws:cloudformation:eu-west-3:065908811349:stack/amplify-reactcognitosocial-dev-2eab8/831ca790-447d-11f1-99bc-06473cf2ba71",
+      "AmplifyAppId": "d2unp931q448s6"
+    },
+    "categories": {
+      "auth": {
+        "reactcognitosocialcc51edff": {}
+      }
+    }
+  }
+}
