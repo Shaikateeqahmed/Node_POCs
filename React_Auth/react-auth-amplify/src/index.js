@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Amplify } from "aws-amplify";
-import awsConfig from "./aws-config";
+import awsConfig from "./authentication/aws-config";
 
 Amplify.configure(awsConfig);
 
