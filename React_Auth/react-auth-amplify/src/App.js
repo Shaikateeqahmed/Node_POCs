@@ -1,16 +1,23 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import {
   getCurrentUser,
   fetchUserAttributes,
   signInWithRedirect,
   signOut,
 } from "aws-amplify/auth";
+import { fetchMessage } from "./services/api";
 
 function App() {
   const [user, setUser] = useState(null);
+  // Use a ref to track if we've already initialized
+  const initialized = useRef(false);
 
   useEffect(() => {
-    checkUser();
+    if (!initialized.current) {
+      checkUser();
+      // hitYourBackendApi(); // Call your backend here
+      initialized.current = true;
+    }
   }, []);
 
   const checkUser = async () => {
@@ -22,6 +29,7 @@ function App() {
         username: currentUser.username,
         email: attributes.email,
       });
+     await fetchMessage(); // Call API after sign-in
     } catch {
       setUser(null);
     }

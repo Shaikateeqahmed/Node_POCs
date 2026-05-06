@@ -2,7 +2,7 @@ import axios from 'axios';
 import { fetchAuthSession } from 'aws-amplify/auth';
 
 const axiosClient = axios.create({
-  baseURL: 'https://your-api-endpoint.com', // Replace with your API URL
+  baseURL: 'http://localhost:5000', // Replace with your API URL
 });
 
 // This interceptor runs before every request
