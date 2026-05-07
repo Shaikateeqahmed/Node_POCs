@@ -28,6 +28,8 @@ function App() {
       setUser({
         username: currentUser.username,
         email: attributes.email,
+        name: attributes.name,
+        role: attributes['custom:userRole']
       });
      await fetchMessage(); // Call API after sign-in
     } catch {
@@ -51,7 +53,8 @@ function App() {
           <h2>Profile</h2>
           <p>Username: {user.username}</p>
           <p>Email: {user.email}</p>
-
+          <p>Name: {user.name}</p>
+          <p>Role: {user.role}</p>
           <button onClick={handleSignOut}>Logout</button>
         </div>
       ) : (

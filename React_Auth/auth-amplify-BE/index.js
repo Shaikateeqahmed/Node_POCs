@@ -7,6 +7,7 @@ app.use(cors());
 app.use(express.json());
 app.use(tokenValidation);
 app.get('/api', (req, res) => {
+  console.log(req.user); // Log the authenticated user info for debugging
   res.json({ message: 'Hello from the backend!' });
 });
 
